@@ -24,7 +24,7 @@ import org.hibernate.validator.constraints.NotBlank;
  */
 @Entity
 @Table(name = "usuario")
-public class Usuário implements Serializable{
+public class Usuario implements Serializable{
     
     @Id
     @SequenceGenerator(name = "seq_usuario", sequenceName = "seq_usuario_id", allocationSize = 1)
@@ -47,7 +47,7 @@ public class Usuário implements Serializable{
     
     private Boolean status;
 
-    public Usuário() {
+    public Usuario() {
     }
     
     public Integer getId() {
@@ -105,7 +105,7 @@ public class Usuário implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Usuário other = (Usuário) obj;
+        final Usuario other = (Usuario) obj;
         if (!Objects.equals(this.id, other.id)) {
             return false;
         }
